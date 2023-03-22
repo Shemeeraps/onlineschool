@@ -1,0 +1,482 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+   
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>MY SCHOOL-shape your future with us</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{%  static 'images/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="{% static 'css/versions.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+	<link rel="stylesheet" href="{% static 'css/mycss'%}">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="{% static 'js/modernizer.js' %}"></script>
+
+	 <!-- javascript for dropdown -->
+	 <script language="javascript" type="text/javascript">
+		function dynamicdropdown(listindex)
+		{
+			switch (listindex)
+			{
+			case "Computer Science" :
+				document.getElementById("status").options[0]=new Option("Choose Course","");
+				document.getElementById("status").options[1]=new Option("Data Structures","Data Structures");
+				document.getElementById("status").options[2]=new Option("Artificial Intelligence","Artificial Intelligence");
+				document.getElementById("status").options[3]=new Option("Databases","Databases");
+				document.getElementById("status").options[4]=new Option("C","C");
+				document.getElementById("status").options[5]=new Option("C++","C++");
+				break;
+			case "Physics" :
+				document.getElementById("status").options[0]=new Option("Choose Course","");
+				document.getElementById("status").options[1]=new Option("Geology","Geology");
+				document.getElementById("status").options[2]=new Option("Thermodynamics","Thermodynamics");
+				document.getElementById("status").options[3]=new Option("Space and Time","Space and Time");
+				document.getElementById("status").options[4]=new Option("Fluid Dynamics","Fluid Dynamics");
+				break;
+			case "Biology" :
+				document.getElementById("status").options[0]=new Option("Choose Course","");
+				document.getElementById("status").options[1]=new Option("Anatomy","Anatomy");
+				document.getElementById("status").options[2]=new Option("Genetics","Genetics");
+				document.getElementById("status").options[3]=new Option("Microbiology","Microbiology");
+				document.getElementById("status").options[4]=new Option("Zoology","Zoology");
+				break;
+			case "Commerce" :
+				document.getElementById("status").options[0]=new Option("Choose Course","");
+				document.getElementById("status").options[1]=new Option("Accountancy","Accountancy");
+				document.getElementById("status").options[2]=new Option("Business Studies","Business Studies");
+				document.getElementById("status").options[3]=new Option("Ecnomics","Ecnomics");
+				document.getElementById("status").options[4]=new Option("Informatics","Informatics");
+				break;
+			case "Humanities" :
+				document.getElementById("status").options[0]=new Option("Choose Course","");
+				document.getElementById("status").options[1]=new Option("Sociology","Sociology");
+				document.getElementById("status").options[2]=new Option("History","History");
+				document.getElementById("status").options[3]=new Option("Philosophy","Philosophy");
+				document.getElementById("status").options[4]=new Option("Geography","Geography");
+				break;
+			case "Mathematics" :
+				document.getElementById("status").options[0]=new Option("Choose Course","");
+				document.getElementById("status").options[1]=new Option("Algebra","Algebra");
+				document.getElementById("status").options[2]=new Option("Calculus","Calculus");
+				document.getElementById("status").options[3]=new Option("Trigonometry","Trigonometry");
+				document.getElementById("status").options[4]=new Option("Integration","Integration");
+				break;
+			}
+			return true;
+		}
+	  </script>
+  
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		  <div class="modal-content">
+			  <div class="modal-header tit-up">
+				  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				  <h4 class="modal-title">Customer Login</h4>
+			  </div>
+			  <div class="modal-body customer-box">
+				  <!-- Nav tabs -->
+				  <ul class="nav nav-tabs">
+					  <li><a class="active" href="#Login" data-toggle="tab">Login</a></li>
+					  <li><a href="#Registration" data-toggle="tab">Registration</a></li>
+				  </ul>
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+					  <div class="tab-pane active" id="Login">
+						  <form role="form" class="form-horizontal">
+							  <div class="form-group">
+								  <div class="col-sm-12">
+									  <input class="form-control" id="email1" placeholder="Name" type="text">
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <div class="col-sm-12">
+									  <input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
+								  </div>
+							  </div>
+							  <div class="row">
+								  <div class="col-sm-10">
+									  <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										  Submit
+									  </button>
+									  <a class="for-pwd" href="javascript:;">Forgot your password?</a>
+								  </div>
+							  </div>
+						  </form>
+					  </div>
+					  <div class="tab-pane" id="Registration">
+						  <form role="form" class="form-horizontal">
+							  <div class="form-group">
+								  <div class="col-sm-12">
+									  <input class="form-control" placeholder="Name" type="text">
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <div class="col-sm-12">
+									  <input class="form-control" id="email" placeholder="Email" type="email">
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <div class="col-sm-12">
+									  <input class="form-control" id="mobile" placeholder="Mobile" type="email">
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <div class="col-sm-12">
+									  <input class="form-control" id="password" placeholder="Password" type="password">
+								  </div>
+							  </div>
+							  <div class="row">							
+								  <div class="col-sm-10">
+									  <button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										  Save &amp; Continue
+									  </button>
+									  <button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										  Cancel</button>
+								  </div>
+							  </div>
+						  </form>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+		</div>
+	  </div>
+  
+	  <!-- LOADER -->
+	  <div id="preloader">
+		  <div class="loader-container">
+			  <div class="progress-br float shadow">
+				  <div class="progress__item"></div>
+			  </div>
+		  </div>
+	  </div>
+	  <!-- END LOADER -->	
+	  
+
+   <!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="{% static 'images/logo.png' %}" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Department</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science">Computer Science </a>
+								<a class="dropdown-item" href="https://en.wikipedia.org/wiki/Physics">Physics</a>
+								<a class="dropdown-item" href="https://en.wikipedia.org/wiki/Commerce">Commerce</a>
+                                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Biology">Biology</a>
+                                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Humanities">Humanities </a>
+                                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Mathematics">Mathematics</a>
+							</div>
+						</li>
+                        {% if user.is_authenticated %}
+							<li class="nav-item"><a href="#" class="nav-link">WELCOME!!  {{user.username}}</a></li>
+							<li class="nav-item"><a href="logout" class="nav-link">LOG OUT</a></li>
+						{% else %}
+							<li class="nav-item"><a href="register"class="nav-link">REGISTER</a></li>
+							<li class="nav-item"><a href="login" class="nav-link">LOG IN</a></li>
+						{% endif %}
+						
+						<!-- <li class="nav-item"><a class="nav-link" href="teachers.html">Register</a></li>
+						<li class="nav-item"><a class="nav-link" href="pricing.html">Login</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Log Out</a></li> -->
+					</ul>
+					<!-- <ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Book Now</span></a></li>
+                    </ul> -->
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>MY SCHOOL<span class="m_1">Learn Anything from Anywhere.</span></h1>
+		</div>
+	</div>
+	
+    <div id="contact" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Complete Your Profile</h3>
+            </div><!-- end title -->
+
+			<div class="row">
+				<div class="col-xl-6 col-md-12 col-sm-12">
+					<div class="profile">
+							
+						<form action="updateform" method="post">
+							{% csrf_token %}
+							<div class="row row-fluid">
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input type="text" name="first_name" id="first_name" class="form-control" placeholder="Your Full Name" required>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input type="date" class="form-control" name="dob" placeholder="Date of Birth" required>
+								</div><br>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input type="number" class="form-control" name="age" placeholder="Your Age.." required>
+								</div>
+								
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone" required>
+								</div><br><br>
+								<div class="col-lg-6 col-md-6 col-sm-6 custom-control custom-radios" aria-required="true">
+									<label>Gender</label>
+									<input type="radio" id="male" name="gender" value="male">
+									<label for="male">M</label>
+									<input type="radio" id="female" name="gender" value="female">
+									<label for="female">F</label>
+									<input type="radio" id="others" name="gender" value="others">
+									<label for="others">Others</label>
+								</div>
+								
+								<div class="col-lg-12 col-md-12 col-sm-12" aria-required="true">
+									<textarea class="form-control" name="address" id="address" rows="6" placeholder="Your Permenent address"></textarea>
+								</div>
+								<div>
+									<div class="col-lg-6 col-md-6 col-sm-6 department_div" id="department_div">Department:
+									<select id="department"  name="department" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+									  <option value="">Select department</option>
+									  <option value="Computer Science" selected="selected">Computer Science</option>
+									  <option value="Physics"selected="selected">Physics</option>
+									  <option value="Commerce"selected="selected">Commerce</option>
+									  <option value="Biology"selected="selected">Biology</option>
+									  <option value="Humanities"selected="selected">Humanities</option>
+									  <option value="Mathematics"selected="selected">Mathematics</option>
+									</select>
+									</div>
+			
+									<div class="col-lg-6 col-md-6 col-sm-6 course_div" id="course_div">Courses:
+									<script type="text/javascript" language="JavaScript">
+									document.write('<select name="status" id="status"><option value="">Select Course</option></select>')
+									</script>
+									<noscript>
+									<select id="course" name="course" >
+										<option value="Data Structures">Data Structures</option>
+										<option value="Artificial Intelligence">Artificial Intelligence</option>
+										<option value="Thermodynamics">Thermodynamics</option>
+										<option value="Geology">Geology</option>
+										<option value="Databases">Databases</option>
+										<option value="C">C</option>
+										<option value="Thermodynamics">Thermodynamics</option>
+									  
+										<option value="Space and Time">Space and Time</option>
+										<option value="Fluid Dynamics">Fluid Dynamics</option>
+										<option value="Anatomy">Anatomy</option>
+										<option value="Genetics">Genetics</option>
+										<option value="Geology">Geology</option>
+										<option value="Microbiology">Microbiology</option>
+										<option value="Accountancy">Accountancy</option>
+										<option value="Business Studies">Business Studies</option>
+										<option value="Ecnomics">Ecnomics</option>
+										<option value="Informatics">Informatics</option>
+										<option value="Sociology">Sociology</option>
+										<option value="History">History</option>
+										<option value="Philosophy">Philosophy</option>
+										<option value="Geography">Geography</option>
+										<option value="Algebra">Algebra</option>
+										<option value="Calculus">Calculus</option>
+										<option value="Integration">Integration</option>
+										<option value="Trigonometry">Trigonometry</option>
+									</select>
+									</noscript>
+									</div>
+								</div>
+						
+								<div class="col-lg-6 col-md-6 col-sm-6 purpose">
+									<label>PURPOSE</label><br>
+									<select name="course" id="course">
+									<option value="Enquiry" selected="selected">Enquiry</option>
+									<option value="Place Order" selected="selected">Place Order</option>
+									<option value="Casual Browsing" selected="selected">Casual Browsing</option>
+									
+								  </select>
+								</div>
+			
+								<div class="col-lg-6 col-md-6 col-sm-6 material">
+									<label>Materials Provide</label><br>
+									<input type="checkbox" id="m1" name="m1" value="question_papers">
+									<label for="m1">Question Papers</label><br>
+									<input type="checkbox" id="m2" name="m2" value="videos">
+									<label for="m2"> Videos</label><br>
+									<input type="checkbox" id="m3" name="m3" value="Interview Questions">
+									<label for="m3">Interview Questions</label><br>
+									<input type="checkbox" id="m4" name="m4" value="sample projects">
+									<label for="m4"> Sample Projects</label><br>
+								</div>
+								
+							
+								<div class="text-center" style="margin:3rem;">
+									<button type="submit"  class="btn btn-light btn-radius btn-brd grd1 btn-block">Update Profile</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div><!-- end col -->
+				<div>
+					<div>
+						{% for msg in messages %}
+      						<p>{{msg}}</p>
+      					{% endfor %}
+					</div>
+					<div>
+						Wishes to go back??
+						<a href="logout"class="btn btn-info  btn-radius btn-brd grd3">Log Out</a>
+						<a href="/"class="btn btn-danger  btn-radius btn-brd grd2">Go to Home</a>
+					</div>
+				</div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+	<div class="parallax section dbcolor">
+        <div class="container">
+            <div class="row logos">
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="{% static 'images/logo_01.png' %}" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="{% static 'images/logo_02.png' %}" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="{% static 'images/logo_03.png' %}" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="{% static 'images/logo_04.png' %}" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="{% static 'images/logo_05.png' %}" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="{% static 'images/logo_06.png' %}" alt="" class="img-repsonsive"></a>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+   <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>About US</h3>
+                        </div>
+                        <p> Set your team up for success with reimagined learning to empower their personal and professional growth.<br>
+                            With inspiring classes on soft skills, business essentials, well being and more, your whole team will have deep knowledge and expertise at their fingertips.</p>   
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-github"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul><!-- end links -->
+						</div>						
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Information Link</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Pricing</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">info@yoursite.com</a></li>
+                            <li><a href="#">www.yoursite.com</a></li>
+                            <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
+                            <li>+61 3 8376 6284</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2023 <a href="#">MY SCHOOL - A PLACE WHERE YOU SHAPE YOUR FUTURE</p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="{% static 'js/all.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+	<script src="{% static 'js/timeline.min.js' %}"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>

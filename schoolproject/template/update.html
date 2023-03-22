@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Your Profile</title>
+
+    <!-- javascript for dropdown -->
+    <script language="javascript" type="text/javascript">
+      function dynamicdropdown(listindex)
+      {
+          switch (listindex)
+          {
+          case "Computer Science" :
+              document.getElementById("status").options[0]=new Option("Choose Course","");
+              document.getElementById("status").options[1]=new Option("Data Structures","Data Structures");
+              document.getElementById("status").options[2]=new Option("Artificial Intelligence","Artificial Intelligence");
+              document.getElementById("status").options[3]=new Option("Databases","Databases");
+              document.getElementById("status").options[4]=new Option("C","C");
+              document.getElementById("status").options[5]=new Option("C++","C++");
+              break;
+          case "Physics" :
+              document.getElementById("status").options[0]=new Option("Choose Course","");
+              document.getElementById("status").options[1]=new Option("Geology","Geology");
+              document.getElementById("status").options[2]=new Option("Thermodynamics","Thermodynamics");
+              document.getElementById("status").options[3]=new Option("Space and Time","Space and Time");
+              document.getElementById("status").options[4]=new Option("Fluid Dynamics","Fluid Dynamics");
+              break;
+          case "Biology" :
+              document.getElementById("status").options[0]=new Option("Choose Course","");
+              document.getElementById("status").options[1]=new Option("Anatomy","Anatomy");
+              document.getElementById("status").options[2]=new Option("Genetics","Genetics");
+              document.getElementById("status").options[3]=new Option("Microbiology","Microbiology");
+              document.getElementById("status").options[4]=new Option("Zoology","Zoology");
+              break;
+          case "Commerce" :
+              document.getElementById("status").options[0]=new Option("Choose Course","");
+              document.getElementById("status").options[1]=new Option("Accountancy","Accountancy");
+              document.getElementById("status").options[2]=new Option("Business Studies","Business Studies");
+              document.getElementById("status").options[3]=new Option("Ecnomics","Ecnomics");
+              document.getElementById("status").options[4]=new Option("Informatics","Informatics");
+              break;
+          case "Humanities" :
+              document.getElementById("status").options[0]=new Option("Choose Course","");
+              document.getElementById("status").options[1]=new Option("Sociology","Sociology");
+              document.getElementById("status").options[2]=new Option("History","History");
+              document.getElementById("status").options[3]=new Option("Philosophy","Philosophy");
+              document.getElementById("status").options[4]=new Option("Geography","Geography");
+              break;
+          case "Mathematics" :
+              document.getElementById("status").options[0]=new Option("Choose Course","");
+              document.getElementById("status").options[1]=new Option("Algebra","Algebra");
+              document.getElementById("status").options[2]=new Option("Calculus","Calculus");
+              document.getElementById("status").options[3]=new Option("Trigonometry","Trigonometry");
+              document.getElementById("status").options[4]=new Option("Integration","Integration");
+              break;
+          }
+          return true;
+      }
+    </script>
+
+    <link rel="stylesheet" href="{% static 'css/mycss.css' %}">
+</head>
+<body>
+  <div class="profile">
+    <h1>UPDATE PROFILE</h1>
+    <form action="update" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>NAME</label>
+            <input type="text" class="form-control"  placeholder="Your Name..." name="fname"><br><br>
+            <label>DOB</label>
+            <input type="date" class="form-control" name="dob"><br><br>
+            <label>AGE</label>
+            <input type="number" class="form-control" name="age"><br><br>
+            <div>
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">M</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">F</label>
+                <input type="radio" id="others" name="gender" value="others">
+                <label for="others">Others</label>
+            </div>
+            <br><br>
+            <label>PHONE NO</label>
+            <input type="text" class="form-control" name="phone"><br><br>
+            <label>EMAIL ID</label>
+            <input type="email" class="form-control" name="email"><br><br>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress">
+            </div><br>
+            <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" >
+            </div><br>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label for="inputCity">City</label>
+                  <input type="text" class="form-control" id="inputCity">
+              </div><br>
+              <br>
+              <div class="form-group col-md-4">
+                  <label for="inputState">State</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>Andra Pradesh</option>
+                    <option>Rajasthan</option>
+                    <option>Haryana</option>
+                    <option>Gujarat</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Kerala</option>
+                    <option>Tamilnadu</option>
+                    <option>Karnataka</option>
+                    <option>Tripura</option>
+                    <option>Assam</option>
+                  </select>
+              </div>
+              <br>
+              <div class="form-group col-md-2">
+                  <label for="inputZip">Pincode</label>
+                  <input type="text" class="form-control" id="inputZip">
+              </div>
+            </div>
+            <br><br>
+
+            <!-- dependent dropdown  -->
+            <!-- department -->
+            <div class="department_div" id="department_div">Department:
+            <select id="department" name="department" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+              <option value="">Select department</option>
+              <option value="Computer Science" selected="selected">Computer Science</option>
+              <option value="Physics"selected="selected">Physics</option>
+              <option value="Commerce"selected="selected">Commerce</option>
+              <option value="Biology"selected="selected">Biology</option>
+              <option value="Humanities"selected="selected">Humanities</option>
+              <option value="Mathematics"selected="selected">Mathematics</option>
+            </select>
+            </div><br>
+
+            <!-- courses -->
+            
+            <div class="course_div" id="course_div">Courses:
+              <script type="text/javascript" language="JavaScript">
+              document.write('<select name="status" id="status"><option value="">Select Course</option></select>')
+              </script>
+              <noscript>
+              <select id="course" name="course">
+                  <option value="Data Structures">Data Structures</option>
+                  <option value="Artificial Intelligence">Artificial Intelligence</option>
+                  <option value="Thermodynamics">Thermodynamics</option>
+                  <option value="Geology">Geology</option>
+                  <option value="Databases">Databases</option>
+                  <option value="C">C</option>
+                  <option value="Thermodynamics">Thermodynamics</option>
+                
+                  <option value="Space and Time">Space and Time</option>
+                  <option value="Fluid Dynamics">Fluid Dynamics</option>
+                  <option value="Anatomy">Anatomy</option>
+                  <option value="Genetics">Genetics</option>
+                  <option value="Geology">Geology</option>
+                  <option value="Microbiology">Microbiology</option>
+                  <option value="Accountancy">Accountancy</option>
+                  <option value="Business Studies">Business Studies</option>
+                  <option value="Ecnomics">Ecnomics</option>
+                  <option value="Informatics">Informatics</option>
+                  <option value="Sociology">Sociology</option>
+                  <option value="History">History</option>
+                  <option value="Philosophy">Philosophy</option>
+                  <option value="Geography">Geography</option>
+                  <option value="Algebra">Algebra</option>
+                  <option value="Calculus">Calculus</option>
+                  <option value="Integration">Integration</option>
+                  <option value="Trigonometry">Trigonometry</option>
+              </select>
+              </noscript>
+            </div>
+
+            <br><br>
+            <div class="purpose">
+              <label>PURPOSE</label>
+              <select name="course" id="course">
+              <option value="Enquiry" selected="selected">Enquiry</option>
+              <option value="Place Order" selected="selected">Place Order</option>
+              <option value="Casual Browsing" selected="selected">Casual Browsing</option>
+              
+            </select>
+            </div>
+            <br><br>
+            <div class="material">
+              <label>Materials Provide</label><br>
+              <input type="checkbox" id="m1" name="m1" value="question_papers">
+              <label for="vehicle1">Question Papers</label><br>
+              <input type="checkbox" id="m2" name="m2" value="videos">
+              <label for="m2"> Videos</label><br>
+              <input type="checkbox" id="m3" name="m3" value="Interview Questions">
+              <label for="vehicle1">Interview Questions</label><br>
+              <input type="checkbox" id="m4" name="m4" value="sample projects">
+              <label for="vehicle1"> Sample Projects</label><br>
+            </div>
+            <br><br>
+            <input type="submit" value="UPDATE">
+          </div>
+    </form>
+  </div>
+    <div style="text-align: center;">
+      Finished Reading?<a class="btn btn-danger" href="logout">LOG OUT</a>&nbsp;
+      <a href="">Return to home page</a>
+    </div>
+
+</body>
+</html>
